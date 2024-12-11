@@ -1,0 +1,1 @@
+function foo(int $a, int $b): int {  if ($a + $b > PHP_INT_MAX) {    throw new OverflowException('Integer overflow detected');  }  return $a + $b;} function bar(int $a, int $b): int {  return foo($a, $b) * 2;} try {  $result = bar(2147483647, 1);  echo $result; } catch (OverflowException $e) {  echo "Error: " . $e->getMessage();}
