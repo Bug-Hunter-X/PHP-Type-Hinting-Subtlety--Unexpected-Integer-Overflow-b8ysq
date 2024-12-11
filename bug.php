@@ -1,0 +1,1 @@
+function foo(int $a, int $b): int {return $a + $b;} function bar(int $a, int $b): int {return foo($a, $b) * 2;} $result = bar(5, 10); echo $result;
